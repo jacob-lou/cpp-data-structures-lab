@@ -62,3 +62,8 @@ g++ ulliststr.cpp test_ulliststr.cpp -o demo_ullist
 ### Notes on Memory Safety
 - ULListStr owns its nodes and releases them in clear() and destructor.
 - The split function transfers node ownership from in into odds/evens.
+
+## Quick Demo
+```bash
+bash examples/run_demo.sh
+```
