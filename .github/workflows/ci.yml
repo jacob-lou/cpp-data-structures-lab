@@ -1,0 +1,17 @@
+name: C++ CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build demos
+        run: |
+          g++ -std=c++17 -O2 split.cpp test_split.cpp -o demo_split
+          ./demo_split
+          g++ -std=c++17 -O2 ulliststr.cpp test_ulliststr.cpp -o demo_ullist
+          ./demo_ullist
